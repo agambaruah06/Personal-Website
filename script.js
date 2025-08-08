@@ -140,11 +140,9 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
 navigationLinks.forEach((navLink) => {
   navLink.addEventListener("click", function () {
-    const targetPage = navLink.getAttribute("data-page") || navLink.innerHTML.trim().toLowerCase();
-
+    const targetPage = navLink.getAttribute("data-page");
     pages.forEach((page) => {
       if (page.dataset.page === targetPage) {
         page.classList.add("active");
@@ -152,9 +150,11 @@ navigationLinks.forEach((navLink) => {
         page.classList.remove("active");
       }
     });
-
     navigationLinks.forEach((link) => link.classList.remove("active"));
     navLink.classList.add("active");
     window.scrollTo(0, 0);
   });
 });
+
+document.querySelector('[data-page="resume"]').classList.add('active');
+document.querySelectorAll('[data-page]:not([data-page="resume"])').forEach(e => e.classList.remove('active'));

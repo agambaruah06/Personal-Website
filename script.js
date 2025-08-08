@@ -140,6 +140,7 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// Add event to all nav links for page navigation
 navigationLinks.forEach((navLink) => {
   navLink.addEventListener("click", function () {
     const targetPage = navLink.getAttribute("data-page");
@@ -155,6 +156,3 @@ navigationLinks.forEach((navLink) => {
     window.scrollTo(0, 0);
   });
 });
-
-document.querySelector('[data-page="resume"]').classList.add('active');
-document.querySelectorAll('[data-page]:not([data-page="resume"])').forEach(e => e.classList.remove('active'));

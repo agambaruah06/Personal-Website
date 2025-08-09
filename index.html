@@ -746,89 +746,45 @@
 
 
 
-      <!--
-        - #PROJECTS
-      -->
+      <!-- #PROJECTS -->
+<article class="projects" data-page="projects">
 
-      <article class="projects" data-page="projects">
+  <header>
+    <h2 class="h2 article-title">Projects</h2>
+  </header>
 
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
+  <section class="projects">
 
-        <section class="projects">
+    <!-- Filter Buttons -->
+    <ul class="filter-list">
+      <li class="filter-item"><button data-filter-btn>All</button></li>
+      <li class="filter-item"><button data-filter-btn>Academic</button></li>
+      <li class="filter-item"><button data-filter-btn>Technical</button></li>
+      <li class="filter-item"><button data-filter-btn>Creative</button></li>
+      <li class="filter-item"><button data-filter-btn>Side Hustles</button></li>
+      <li class="filter-item"><button data-filter-btn>Personal Growth</button></li>
+      <li class="filter-item"><button data-filter-btn>Writing</button></li>
+    </ul>
 
-          <ul class="filter-list">
+    <!-- Dropdown Select (Mobile Friendly) -->
+    <div class="filter-select-box">
+      <button class="filter-select" data-select>
+        <div class="select-value" data-selecct-value>Select category</div>
+        <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+      </button>
+      <ul class="select-list">
+        <li class="select-item"><button data-select-item>All</button></li>
+        <li class="select-item"><button data-select-item>Academic</button></li>
+        <li class="select-item"><button data-select-item>Technical</button></li>
+        <li class="select-item"><button data-select-item>Creative</button></li>
+        <li class="select-item"><button data-select-item>Side Hustles</button></li>
+        <li class="select-item"><button data-select-item>Personal Growth</button></li>
+        <li class="select-item"><button data-select-item>Writing</button></li>
+      </ul>
+    </div>
 
-            <li class="filter-item">
-              <button data-filter-btn>Academic</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Technical</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Creative</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Side Hustles</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Personal Growth</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Writing</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>Academic</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Technical</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Creative</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Side Hustles</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Personal Growth</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Writing</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
+    <!-- Project List -->
+    <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="Academic">
               <a href="assets/20241017_MainReport1.pdf">
@@ -1101,13 +1057,8 @@
             </li>
 
           </ul>
-
-        </section>
-
-      </article>
-
-
-
+  </section>
+</article>
 
 
       <!--

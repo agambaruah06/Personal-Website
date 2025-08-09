@@ -73,19 +73,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const filterItems = document.querySelectorAll("[data-filter-item]");
+ const filterItems = document.querySelectorAll("[data-filter-item]");
 
-  const filterFunc = function (selectedValue) {
-    for (let i = 0; i < filterItems.length; i++) {
-      if (selectedValue === "all") {
-        filterItems[i].classList.add("active");
-      } else if (selectedValue === filterItems[i].dataset.category) {
-        filterItems[i].classList.add("active");
-      } else {
-        filterItems[i].classList.remove("active");
-      }
+function filterFunc(selectedValue) {
+  const normalizedValue = selectedValue.trim().toLowerCase();
+
+  filterItems.forEach(item => {
+    const itemCategory = item.dataset.category.trim().toLowerCase();
+
+    if (normalizedValue === "all" || normalizedValue === itemCategory) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
     }
-  };
+  });
+}
 
   let lastClickedBtn = filterBtn[0];
 
@@ -113,6 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  
 
   const navigationLinks = document.querySelectorAll("[data-nav-link]");
   const pages = document.querySelectorAll("[data-page]");
